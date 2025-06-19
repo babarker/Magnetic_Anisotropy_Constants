@@ -3,8 +3,7 @@
 # Given the results from the determination of the Mag. Aniso. Constants (or Coefficients)
 # we can predict what the local point group symmetry is!
 
-# Note: This identification depends on the choice of axis;
-# different non-zero sets of coefficients may be found for the icosahedral group, than listed.
+# Note: This identification depends on the choice of axis
 
 def read_constants(fname):
 
@@ -39,7 +38,8 @@ def groups_table(nonzeroConst):
     Hex2 = ["K20","K40","K60","K66"]
     Cub1 = ["K40","K44","K60","K62","K64","K66"]
     Cub2 = ["K40","K44","K60","K64"]
-    Ico1 = ["K60","K65"]
+    Ico5 = ["K60","K65"]
+    Ico3 = ["K60","K63","K66"]
 
     if len(nzC) == 27:
 
@@ -85,13 +85,17 @@ def groups_table(nonzeroConst):
 
         group = "Cubic: T_d, O, or O_h"
 
-    elif nzC == Ico1 :
+    elif nzC == Ico5 :
 
-        group = "Icosahedral: I_h"
+        group = "Icosahedral: I_h (z-axis has 5-fold symmetry)"
+
+    elif nzC == Ico3 :
+
+        group = "Icosahedral: I_h (z-axis has 3-fold symmetry)"
 
     else :
       
-        group = "Either your z-axis is not oriented with maximal symmetry, or you do not have a crystallographic point group (or I_h)"
+        group = "Either your z-axis is not oriented with maximal symmetry, you do not have a crystallographic( + I_h) point group, or your energies have large errors"
 
     print(group)
 
