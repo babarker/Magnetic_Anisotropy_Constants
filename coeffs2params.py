@@ -39,8 +39,11 @@ def coeffs_to_params_non0(coeff_dict,LL,MM):
     pref = np.sqrt((2.*LL + 1.)/(4.*np.pi))
 
     # Equations for BLM parameters, given Coefficients:
+    # BAB, Aug 2026. SMG found error with BLmM equation; corrected in draft.
+    # Recalculate numerical values, when appropriate. Odd MM (q) will be same.
     BLpM = pref*(1./2.)*(kappaLpM + (-1.)**(MM)*kappaLmM)
-    BLmM = 1j*pref*(1./2.)*((-1)**(MM)*kappaLpM - kappaLmM)
+    # BLmM = 1j*pref*(1./2.)*((-1)**(MM)*kappaLpM - kappaLmM)
+    BLmM = 1j*pref*(1./2.)*((-1)**(MM)*kappaLmM - kappaLpM)
 
     return(BLpM, BLmM)
 
