@@ -110,13 +110,17 @@ def groups_table(nonzeroConst):
 
     else :
       
-        group = "Either your z-axis is not oriented with maximal symmetry, you do not have a crystallographic point group, or your energies have large errors"
+        group = "Either your z-axis is not oriented with maximal symmetry, or your energies have large errors"
 
     print(group)
 
     return
 
 def main():
+
+    print("WARNING: You must independently verify the relevant point group. In the best case, it will belong to the suggested point group family below.")
+    print("WARNING: Due to the generally small size of the Anisotropy Energy, numerical error may cause incorrect prediction of Triclinic or Monoclinic symmetry.")
+    print()
 
     nonzeroConst = read_constants("Magnetic_Anisotropy_Constants.txt")
     groups_table(nonzeroConst)
