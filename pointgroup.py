@@ -40,6 +40,9 @@ def groups_table(nonzeroConst):
     Cub2 = ["K40","K44","K60","K64"]
     Ico5 = ["K60","K65"]
     Ico3 = ["K60","K63","K66"]
+    Pent1 = ["K20","K40","K60","K65","K6-5"]
+    Pent1 = ["K20","K40","K60","K65"]
+    Mol = ["K20","K40","K60"]
 
     if len(nzC) == 27:
 
@@ -93,9 +96,21 @@ def groups_table(nonzeroConst):
 
         group = "Icosahedral: I_h (z-axis has 3-fold symmetry)"
 
+    elif nzC == Pent1:
+
+        group = "Pentagonal: C_5 or S_10"
+
+    elif nzC == Pent2:
+
+        group = "Pentagonal: D_5 or D_5d"
+
+    elif nzC == Mol:
+
+        group = "Molecule with only axial symmetries, to sixth-order"
+
     else :
       
-        group = "Either your z-axis is not oriented with maximal symmetry, you do not have a crystallographic( + I_h) point group, or your energies have large errors"
+        group = "Either your z-axis is not oriented with maximal symmetry, you do not have a crystallographic point group, or your energies have large errors"
 
     print(group)
 
