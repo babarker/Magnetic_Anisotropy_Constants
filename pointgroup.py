@@ -54,7 +54,7 @@ def groups_table(nonzeroConst):
 
     elif nzC == RM :
 
-        group = "Rhombic: C_2v, D_2, or D_2h"
+        group = "Orthohombic: C_2v, D_2, or D_2h"
 
     elif nzC == Tet1 :
 
