@@ -40,6 +40,6 @@ NOTE: THE USER MUST SPECIFY THE DIRECTORY OF THE SCRIPTS IN run_program.py
 After generating the MA Constants and MA Coefficients text files,
 you may run the following script in a directory in which those files are present:
 
-* pointgroupconstants.py :
+* pointgroup.py :
     The non-zero values of the constants are used to guess the local point group symmetry,
     as well as the equation. WARNING: Results must be verified by independent structural analysis.
