@@ -1,0 +1,1 @@
+Either your z-axis is not oriented with maximal symmetry, or your energies have large errors
